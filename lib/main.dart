@@ -75,7 +75,7 @@ class _SignUpFormState extends State<SignUpForm> {
                           if (value == null || value.isEmpty) {
                             return 'Please enter an email';
                           }
-                          if (!RegExp(r'^[^@]+@[^@]+\.[^@]+').hasMatch(value)) {
+                          if (!RegExp(r'[a-zA-Z0-9.]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$').hasMatch(value)) {
                             return 'Email incorrect';
                           }
                           return null;
